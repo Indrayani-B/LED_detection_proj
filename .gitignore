@@ -1,0 +1,7 @@
+led_env/
+__pycache__/
+*.pyc
+output/
+.env
+.lh/
+*.json

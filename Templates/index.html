@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .custom-file-upload {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .custom-file-upload:hover {
+            background-color: #0056b3;
+        }
+        #file-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .btn {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>LED Detection</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">
+                Choose Image
+            </label>
+            <input type="file" id="file-upload" name="file" accept="image/*" required>
+            <p id="file-name">No file chosen</p>
+
+            <button type="submit" class="btn">Process</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("file-upload").addEventListener("change", function() {
+            let fileName = this.files[0] ? this.files[0].name : "No file chosen";
+            document.getElementById("file-name").textContent = fileName;
+        });
+    </script>
+
+</body>
+</html>
