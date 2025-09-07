@@ -17,17 +17,19 @@ A **Python-based LED detection tool** that identifies bright light sources in im
 ---
 
 ## ⚙️ Installation & Setup :
--git clone https://github.com/Indrayani-B/LED_detection_proj.git
--python -m venv venv
--venv\Scripts\activate   # Windows
--pip install -r requirements.txt
+- git clone https://github.com/Indrayani-B/LED_detection_proj.git
+- python -m venv venv
+- venv\Scripts\activate   # Windows
+- pip install -r requirements.txt
 
 ---
 
 ##⚡ How It Works :
--Converts the image to grayscale
--Applies thresholding to isolate bright regions
--Removes noise with erosion and dilation
--Detects LED candidates via connected component analysis
--Extracts contours, centroids, and area
--Draws results on the image and saves a detailed report
+- Converts the image to grayscale
+- Applies thresholding to isolate bright regions
+- Removes noise with erosion and dilation
+- Detects LED candidates via connected component analysis
+- Extracts contours, centroids, and area
+- Draws results on the image and saves a detailed report
+
+---
